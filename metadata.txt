@@ -1,0 +1,16 @@
+[general]
+name=Geo Emprises
+description=Génération des emprises LAZ/JP2/TIF/TIFF et extraction d'orthophotos à partir d'emprises existantes et de plans SHP/DXF avec gestion automatique et manuelle des CRS, mode spatial précis inspiré de V10.2, option DXF par emprise globale et interface avec logo DATAKAD, compatible Qt5/Qt6.
+version=11.5.1
+author=Aness MAHIR
+email=
+about=Geo Emprises - outil QGIS pour générer les emprises et extraire les orthophotos concernées par des plans SHP ou DXF. Les CRS différents sont transformés uniquement en mémoire vers le CRS des emprises. Pour les plans sans CRS reconnu, une sélection manuelle est proposée. Les DXF utilisent par défaut le contrôle géométrique précis ; le mode emprise globale avec marge reste optionnel.
+qgisMinimumVersion=3.34
+qgisMaximumVersion=4.99
+repository=https://github.com/anessmahirdatakad-hub/Geo_Emprises
+tracker=https://github.com/anessmahirdatakad-hub/Geo_Emprises/issues
+homepage=https://github.com/anessmahirdatakad-hub/Geo_Emprises
+category=Vector
+tags=orthophoto,emprise,LAZ,JP2,TIF,SHP,DXF,CRS,projection,spatial index
+experimental=False
+deprecated=False
