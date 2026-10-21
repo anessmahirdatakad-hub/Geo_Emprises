@@ -16,7 +16,6 @@ IMPORTANT :
 
 import os
 import sys
-import subprocess
 import tempfile
 import smtplib
 from urllib.parse import quote
@@ -1804,13 +1803,10 @@ class App(QWidget):
             f"{self.name.text()}.shp"
         )
 
-        if os.path.exists(shp_path):
-
-            subprocess.Popen(["explorer.exe", f"/select,{shp_path}"])
-
-        else:
-
-            subprocess.Popen(["explorer.exe", self.out.text()])
+        # Open the output folder through Qt instead of launching a shell process.
+        # This avoids passing user-controlled paths to subprocess/explorer.
+        output_dir = Path(shp_path).parent if os.path.exists(shp_path) else Path(self.out.text())
+        QDesktopServices.openUrl(QUrl.fromLocalFile(str(output_dir.resolve())))
 
     def log(self, m):
 
